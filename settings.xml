@@ -1,0 +1,34 @@
+<settings>
+ <profiles>
+	<profile>
+            <id>elements-local</id>
+            <properties>
+                <environment>localhost</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>elements-snapshot</id>
+            <properties>
+                <environment>snapshot</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>elements-qa</id>
+            <properties>
+                <environment>qa</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>elements-staging</id>
+            <properties>
+                <environment>staging</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>elements-prod</id>
+            <properties>
+                <environment>api</environment>
+            </properties>
+        </profile>
+  </profiles>
+</settings>
