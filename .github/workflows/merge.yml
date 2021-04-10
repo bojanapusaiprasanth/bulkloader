@@ -78,7 +78,7 @@ jobs:
         run: |
           mvn -s ./settings.xml clean grunt:create-resources grunt:npm grunt:bower grunt:grunt -P elements-local
       - name: upload build folder
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: webapp 
           path: ./target-grunt/webapp
