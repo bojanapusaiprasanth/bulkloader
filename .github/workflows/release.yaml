@@ -25,29 +25,29 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ env.JAVA_VERSION }}
-      - uses: actions/cache@v1
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
-          ${{ runner.os }}-maven-
+            ${{ runner.os }}-maven-
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - uses: actions/cache@v1
+      - uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-          ${{ runner.os }}-node-
+            ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm cache clean --force && npm install
       - name: Install dependencies2
         run: npm ci
       - name: release all the things
         run: |
-        npx multi-semantic-release --execasync
+          npx multi-semantic-release --execasync
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
