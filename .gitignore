@@ -8,3 +8,4 @@
 src/main/webapp/bower_components
 target-grunt
 src/main/webapp/scripts/config.js
+node_modules
