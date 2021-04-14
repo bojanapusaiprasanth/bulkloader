@@ -1,6 +1,6 @@
 {
   "name": "bulkloader",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "The Element Loader and Element Connect applications share the same source code, and application configuration controls if the application is used to load data from one service to another in bulk or keep data between any two services in sync with each other by leveraging Cloud Elements Formulas. The former use case is represented by Element Loader and the latter use case by Element Connect.",
   "main": "index.js",
   "dependencies": {
@@ -23,17 +23,6 @@
   "bugs": {
     "url": "https://github.com/bojanapusaiprasanth/bulkloader/issues"
   },
-  "homepage": "https://github.com/bojanapusaiprasanth/bulkloader#readme",
-  "release": {
-	  "branches": ["main","master","develop"]
-  }
-  {
-  "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
-  }
+  "homepage": "https://github.com/bojanapusaiprasanth/bulkloader#readme"
 }
 
