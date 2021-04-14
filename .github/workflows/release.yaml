@@ -31,9 +31,6 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
           ${{ runner.os }}-maven-
-      - name: mvn verify
-        run: mvn -B verify --file pom.xml
-        working-directory: ${{ env.BASE_DIR }}
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
