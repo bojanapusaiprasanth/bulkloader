@@ -47,7 +47,7 @@ jobs:
         run: npm ci
       - name: release all the things
         run: |
-          npx multi-semantic-release --execasync
+          npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
